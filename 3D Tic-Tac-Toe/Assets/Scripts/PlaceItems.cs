@@ -9,15 +9,20 @@ public class PlaceItems : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int x = 0; x < 4; x++) {
-    for (int y = 0; y < 4; y++) {
-        for (int z = 0; z < 4; z++) {
-            Vector3 position = new Vector3(x, y, z) * spacing;
 
-            Instantiate(cubePrefab, position, cubePrefab.transform.rotation);
+        //Creates a 4*4*4 grid out of cubes
+        for (int x = 0; x < 4; x++) 
+        {
+            for (int y = 0; y < 4; y++) 
+            {
+                 for (int z = 0; z < 4; z++) 
+                {
+                    Vector3 position = new Vector3(x, y, z) * spacing;
+
+                    Instantiate(cubePrefab, position, cubePrefab.transform.rotation);
+                }
+            }
         }
-    }
-}
 
     }
 
